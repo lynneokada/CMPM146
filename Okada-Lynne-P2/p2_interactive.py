@@ -46,7 +46,6 @@ def redraw():
         canvas.create_rectangle(y1,x1,y2,x2,outline='pink')
 
     for segment in path:
-        print(path)
         x1,y1 = shrink(segment[0])
         x2,y2 = shrink(segment[1])
         canvas.create_line(y1,x1,y2,x2,width=2.0,fill='red')
