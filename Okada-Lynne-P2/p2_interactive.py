@@ -75,6 +75,7 @@ def on_click(event):
     else:
         destination_point = event.y*SUBSAMPLE, event.x*SUBSAMPLE
         try:
+            print("Hello World ", destination_point)
             path, visited_boxes = p2_pathfinder.find_path(source_point, destination_point, mesh)
 
         except:
