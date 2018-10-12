@@ -46,6 +46,7 @@ def redraw():
         canvas.create_rectangle(y1,x1,y2,x2,outline='pink')
 
     for segment in path:
+        print(path)
         x1,y1 = shrink(segment[0])
         x2,y2 = shrink(segment[1])
         canvas.create_line(y1,x1,y2,x2,width=2.0,fill='red')
@@ -75,7 +76,6 @@ def on_click(event):
     else:
         destination_point = event.y*SUBSAMPLE, event.x*SUBSAMPLE
         try:
-            print("Hello World ", destination_point)
             path, visited_boxes = p2_pathfinder.find_path(source_point, destination_point, mesh)
 
         except:
